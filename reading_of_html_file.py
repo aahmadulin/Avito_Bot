@@ -93,7 +93,7 @@ async def get_all_data(block_of_code, update: Update, context: ContextTypes.DEFA
         max_price = context.user_data.get('max_price', float('inf'))
         results_count = 0
         for block in block_of_code:
-            if results_count >= 5:  # Ограничиваем до 5 результатов
+            if results_count >= 20:  # Ограничиваем до 20 результатов
                 break
             
             link = block.css_first('a')
